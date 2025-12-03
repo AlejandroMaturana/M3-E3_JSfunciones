@@ -2,18 +2,20 @@
 
 // Datos iniciales
 let montoCuenta = parseFloat(prompt("Ingrese el monto total de la cuenta:")); // parseFloat() Convierte a número de punto flotante
-let porcentajePropina = parseFloat(prompt("Ingrese el porcentaje de propina que desea dejar:")); 
+let porcentajePropina = parseFloat(
+  prompt("Ingrese el porcentaje de propina que desea dejar:")
+);
 
 // Función para calcular la propina
 function calcularPropina(monto, porcentaje) {
-    return monto * (porcentaje / 100);
+  return monto * (porcentaje / 100);
 }
 
 // Datos calculados
 let montoPropina = calcularPropina(montoCuenta, porcentajePropina); // Calculamos la propina
 let totalAPagar = montoCuenta + montoPropina; // Calculamos el total a pagar
 
-// Imprimir resultados
+// Imprimir resultado(s)
 console.log("--- Resumen de la Cuenta ---");
 console.log(`Monto de la cuenta: $${montoCuenta}`);
 console.log(`Propina (${porcentajePropina}%): $${Math.round(montoPropina)}`);
